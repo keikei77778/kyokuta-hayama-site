@@ -429,18 +429,22 @@
       aspect-ratio: 4 / 5;
     }
 
-    /* 26. 写真の上に重ねる手書き風の文字。position: absolute で写真の中の好きな場所に置く */
+    /* 26. 写真の上に重ねる手書き風の文字。position: absolute で写真の中の好きな場所に置く。
+          右上の空（人物の顔にかからない場所）に置き、白抜き文字にして写真の上でも読みやすくする */
     .profile__handwrite {
       position: absolute;
-      top: 22%;
-      right: 8%;
+      top: 6%;
+      right: 6%;
       margin: 0;
+      text-align: right;
       font-family: "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
       font-size: 1.15rem;
       line-height: 2;
       letter-spacing: 0.05em;
-      color: #123f60;
-      text-shadow: 0 1px 6px rgba(255, 255, 255, 0.8);
+      color: #ffffff;
+      text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.5),
+        0 2px 10px rgba(0, 0, 0, 0.35);
     }
 
     .profile__text p {
@@ -882,7 +886,11 @@
         </a>
 
         <a class="card" href="#policy">
-          <div class="photo"><span>写真：散歩するご夫婦</span></div>
+          <div class="photo">
+            <img src="assets/images/散歩する夫婦.png"
+                 alt="海沿いの道でバス停の待合所の前を、手をつないで歩く夫婦の後ろ姿"
+                 style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
           <div class="card__body">
             <p class="card__title">高齢者・福祉</p>
             <p class="card__desc">誰もが安心して<br>暮らせるまちへ</p>
@@ -891,7 +899,11 @@
         </a>
 
         <a class="card" href="#policy">
-          <div class="photo"><span>写真：葉山の海岸</span></div>
+          <div class="photo">
+            <img src="assets/images/葉山の海岸.png"
+                 alt="テトラポッドごしに見える葉山の海と、遠くに広がる街並みと山"
+                 style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
           <div class="card__body">
             <p class="card__title">自然・環境</p>
             <p class="card__desc">美しい葉山の<br>自然を未来に</p>
@@ -900,7 +912,11 @@
         </a>
 
         <a class="card" href="#policy">
-          <div class="photo"><span>写真：ヨットハーバー</span></div>
+          <div class="photo">
+            <img src="assets/images/ヨットハーバー.png"
+                 alt="ヨットが並ぶ葉山マリーナと、奥に見える江ノ島"
+                 style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
           <div class="card__body">
             <p class="card__title">観光・地域経済</p>
             <p class="card__desc">地域の魅力を<br>次の力に</p>
@@ -909,7 +925,11 @@
         </a>
 
         <a class="card" href="#policy">
-          <div class="photo"><span>写真：パソコンでの手続き</span></div>
+          <div class="photo">
+            <img src="assets/images/パソコンでの手続き.png"
+                 alt="スマートフォンとBluetoothキーボードを使って手続きをするようす"
+                 style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
           <div class="card__body">
             <p class="card__title">行政・デジタル化</p>
             <p class="card__desc">わかりやすく<br>開かれた行政へ</p>
@@ -926,7 +946,11 @@
     <div class="container profile__inner">
 
       <div class="profile__figure">
-        <div class="photo" style="width: 100%; height: 100%;"><span>写真：緑の中で海を見る本人</span></div>
+        <div class="photo" style="width: 100%; height: 100%;">
+          <img src="assets/images/緑の中で海を見る本人.png"
+               alt="緑に囲まれた高台から、海と葉山の街並みを見つめる曲田和史"
+               style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
         <p class="profile__handwrite">
           このまちで<br>
           ずっと、これからも。
