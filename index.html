@@ -287,8 +287,8 @@
       <p style="margin: 0;">© 2026 曲田 和史 All rights reserved.</p>
 
       <ul class="footer__links">
-        <li><a href="#">サイトポリシー</a></li>
-        <li><a href="#">プライバシーポリシー</a></li>
+        <li><a href="sitepolicy.html">サイトポリシー</a></li>
+        <li><a href="privacypolicy.html">プライバシーポリシー</a></li>
         <li><a href="#contact">お問い合わせ</a></li>
       </ul>
 
@@ -339,6 +339,15 @@
     // 6. 「上に戻る」ボタンがクリックされたら、ページの先頭（top: 0）までなめらかに動かす
     toTopBtn.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // 7. SNSのアイコンがクリックされたら、まだ準備中であることを知らせる
+    //    forEach で3つのアイコンすべてに同じ処理をつける
+    document.querySelectorAll(".footer__sns a").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();  // リンク先へ移動しようとするのを止める
+        alert("SNSアカウントは現在準備中です。");
+      });
     });
   </script>
 
